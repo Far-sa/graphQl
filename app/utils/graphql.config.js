@@ -1,13 +1,9 @@
-const { graphQLSchema } = require("../graphql/index.graphql")
+const graphqlSchema = require('../graphQL/index.resolver')
 
-function graphqlConfig(req, res){
-    return {
-        schema: graphQLSchema,
-        graphiql: true,
-        context: {req, res}
-    }
-}
-
-module.exports = {
-    graphqlConfig
+exports.graphqlConfig = (req, res) => {
+  return {
+    schema: graphqlSchema,
+    graphiql: true,
+    context: { req, res }
+  }
 }
