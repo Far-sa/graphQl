@@ -1,6 +1,6 @@
 const { GraphQLObjectType, GraphQLString } = require('graphql')
 
-const AuthorType = new GraphQLObjectType({
+exports.AuthorType = new GraphQLObjectType({
   name: 'AuthorType',
   fields: {
     _id: { type: GraphQLString },
@@ -9,4 +9,10 @@ const AuthorType = new GraphQLObjectType({
   }
 })
 
-module.exports = AuthorType
+exports.CategoryType = new GraphQLObjectType({
+  name: 'CategoryType',
+  fields: {
+    _id: { type: GraphQLString },
+    title: { type: GraphQLString }
+  }
+})
