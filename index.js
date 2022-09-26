@@ -1,2 +1,6 @@
-const Application = require("./app/server");
-new Application(4000, "mongodb://localhost:27017/storeDB")
+const Application = require('./app/server')
+const dotenv = require('dotenv')
+
+dotenv.config()
+
+new Application(process.env.PORT, process.env.MONGO_URI)
