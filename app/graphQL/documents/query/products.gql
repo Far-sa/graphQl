@@ -13,5 +13,12 @@
       title
       _id
     }
+    features {
+      height
+      width
+      weight
+      colors
+      length
+    }
   }
 }
