@@ -2,11 +2,15 @@
   Categories {
     _id
     title
+    children {
+      _id
+      title
+    }
   }
 }
 
 {
-  childCategories(parent: "6315bc6158f26d4021f0a444") {
+  childOfCategory(parent: "6315bc6158f26d4021f0a444") {
     _id
     title
   }

@@ -9,8 +9,8 @@ exports.AuthorType = new GraphQLObjectType({
   }
 })
 
-exports.CategoryType = new GraphQLObjectType({
-  name: 'CategoryType',
+exports.PublicCategoryType = new GraphQLObjectType({
+  name: 'PublicCategoryType',
   fields: {
     _id: { type: GraphQLString },
     title: { type: GraphQLString }

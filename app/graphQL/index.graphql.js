@@ -14,7 +14,7 @@ const RootQuery = new GraphQLObjectType({
     blogs: BlogResolver,
     products: ProductResolver,
     categories: CategoryResolver,
-    childCategories: CategoryChildResolver
+    childOfCategory: CategoryChildResolver
   }
 })
 
