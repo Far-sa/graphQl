@@ -1,6 +1,6 @@
 const { GraphQLList } = require('graphql')
 const { BlogModel } = require('../../models/blogs')
-const BlogType = require('../typeDefs/blog.type')
+const { BlogType } = require('../typeDefs/blog.type')
 
 const BlogResolver = {
   type: new GraphQLList(BlogType),
@@ -12,4 +12,4 @@ const BlogResolver = {
   }
 }
 
-module.exports = BlogResolver
+module.exports = { BlogResolver }

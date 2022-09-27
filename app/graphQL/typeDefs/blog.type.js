@@ -17,4 +17,4 @@ const BlogType = new GraphQLObjectType({
   }
 })
 
-module.exports = BlogType
+module.exports = { BlogType }
