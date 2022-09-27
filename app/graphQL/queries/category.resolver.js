@@ -1,4 +1,4 @@
-const { GraphQLList } = require('graphql')
+const { GraphQLList, GraphQLString } = require('graphql')
 const { CategoryModel } = require('../../models/categories')
 const { categoryType } = require('../typeDefs/category.type')
 
@@ -10,4 +10,16 @@ const CategoryResolver = {
   }
 }
 
-module.exports = { CategoryResolver }
+const CategoryChildResolver = {
+  type: new GraphQLList(categoryType),
+  args: {
+    parent: { type: GraphQLString }
+  },
+  resolve: async (_, args) => {
+    const { parent } = args
+    const category = await CategoryModel.find({ parent })
+    return category
+  }
+}
+
+module.exports = { CategoryResolver, CategoryChildResolver }
