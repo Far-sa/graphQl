@@ -14,8 +14,10 @@ const CategoryChildResolver = {
   type: new GraphQLList(CategoryType),
   args: {
     parent: { type: GraphQLString }
+    //authorizationToken : { type: GraphQLString }
   },
   resolve: async (_, args) => {
+    //console.log(args)
     const { parent } = args
     const category = await CategoryModel.find({ parent })
     return category
