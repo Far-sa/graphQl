@@ -13,7 +13,6 @@ const BlogResolver = {
     //console.log(context.req.headers)
     const { req } = context
     req.user = await VerifyAccessTokenInGraphQL(req)
-    console.log('User :', req.user)
     return await BlogModel.find({}).populate([
       { path: 'author' },
       { path: 'category' }

@@ -50,14 +50,13 @@ module.exports = class Application {
           swaggerDefinition: {
             openapi: '3.0.0',
             info: {
-              title: 'Boto Start Store',
+              title: 'Feed Yourself',
               version: '2.0.0',
-              description:
-                'بزرگترین مرجع آموزش برنامه نویسی و فروش محصولات جذاب برای برنامه نویسان',
+              description: '',
               contact: {
-                name: 'Erfan Yousefi',
-                url: 'https://freerealapi.com',
-                email: 'erfanyousefi.co@gmail.com'
+                name: 'Far-Sa',
+                url: '',
+                email: 'fmohtasham82@gmail.com'
               }
             },
             servers: [
