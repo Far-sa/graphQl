@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+
 const AnswerSchema = new mongoose.Schema({
     user : {type : mongoose.Types.ObjectId, ref: "user", required: true},
     comment: {type: String, required: true},

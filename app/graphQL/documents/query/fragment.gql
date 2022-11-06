@@ -1,0 +1,20 @@
+{
+  myData: blogs {
+    ...BlogFields
+  }
+}
+fragment BlogFields on BlogType {
+  _id
+  title
+  short_text
+  text
+  image
+  tags
+  author {
+    _id
+    first_name
+  }
+  category {
+    title
+  }
+}

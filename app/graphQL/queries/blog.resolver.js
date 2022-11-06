@@ -12,11 +12,11 @@ const BlogResolver = {
   args: {
     category: { type: GraphQLString }
   },
-  resolve: async () => {
+  resolve: async (_, args, context) => {
     const { category } = args
     const findQuery = category ? { category } : {}
     //console.log(context.req.headers)
-    //const { req } = context
+    const { req } = context
     req.user = await VerifyAccessTokenInGraphQL(req)
     return await BlogModel.find(findQuery).populate([
       { path: 'author' },

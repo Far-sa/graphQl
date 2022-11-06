@@ -8,7 +8,8 @@ const CourseResolver = {
   args: {
     category: { type: GraphQLString }
   },
-  resolve: async () => {
+  resolve: async (_, args) => {
+    console.log(args)
     const { category } = args
     const findQuery = category ? { category } : {}
     return await CourseModel.find(findQuery).populate([
